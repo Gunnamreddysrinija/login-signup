@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+        <div class="navigator">
+        <div class="left">
+            <p>Icon</p>
+        </div>
+
+        <div class="right">
+            <button class="btn">Home</button>
+            <button class="btn">Visit</button>
+            <button class="btn">Privacy&Security</button>
+            <button class="btn">Settings</button>
+        </div>
+        </div>
+    <div class="body">
+        <div class="form-box" id="form">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-feild" id="namefeild">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username">
+
+                    </div>
+                    <div class="input-feild">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email">
+
+                    </div>
+                    <div class="input-feild">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+
+                    </div>
+                    <P>Forget password<a href="#">  click here!</a></P>
+                </div>
+                <div class="btn-feild">
+                    <button type="button" id="signupbtn">Sign Up</button>
+                    <button type="button" class="disable" id="signinbtn">Log In</button>
+                </div>
+            </form>
+        </div>
+        <div class="img">
+            <img src="final.jpg" class="im">
+          </div>
+        </div>
+      
+   
+<script>
+    let signinbtn=document.getElementById("signinbtn");
+    let signupbtn=document.getElementById("signupbtn");
+    let namefeild=document.getElementById("namefeild");
+    let title=document.getElementById("title");
+
+signinbtn.onclick=function(){
+    namefeild.style.maxHeight="0";
+    title.innerHTML="Log In";
+    signupbtn.classList.add("disable");
+    signinbtn.classList.remove("disable")
+}
+signupbtn.onclick=function(){
+    namefeild.style.maxHeight="60px";
+    title.innerHTML="Log In";
+    signupbtn.classList.remove("disable");
+    signinbtn.classList.add("disable")
+}
+</script>
+    
+</body>
+</html>
